@@ -1,3 +1,6 @@
+// load enviroment variables
+require("dotenv").config();
+
 const express = require('express');
 const path = require('path')
 const bodyParser = require("body-parser")
@@ -6,10 +9,22 @@ const multer = require('multer')
 const { v4: uuidv4 } = require('uuid');
 const socket = require('./socket')
 const PORT = 8080;
+let secret;
 
-// Non-sence way of securing credentials
-const fs = require('fs')
-const secret = JSON.parse(fs.readFileSync(path.join(path.dirname(require.main.filename), "../", "secret.json"))).password
+try {
+    secret = process.env.PASSWORD
+} catch (err) {
+    throw new Error("Mongodb password not found!")
+}
+
+// try {
+//     // Nonsence way of securing credentials
+//     const fs = require('fs')
+//     const secret = JSON.parse(fs.readFileSync(path.join(path.dirname(require.main.filename), "../", "secret.json"))).password
+
+// } catch (error) {
+//      throw new Error("Mongodb password not found!")
+// }
 
 
 const app = express()
