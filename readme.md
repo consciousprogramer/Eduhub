@@ -14,10 +14,11 @@
 ### Frontend
 The frontend folder contains the nextjs project with redux boilerplate (plus some extra redux code) already setup, but you dont't need to bother about the redux code currently. we will mostly write code in pages and components folder initially.
 
-how to run project locally, follow these steps
-1. step one: `npm i`
-1. step two: `npm run dev`
-1. step three: open  `http://localhost:3000`
+how to run frontend locally, follow these steps
+1. step one: `cd frontend`
+1. step two: `npm i`
+1. step three: `npm run dev`
+1. step four: open  `http://localhost:3000`
 
 ### nodeBackend
 This folder contains the nodejs part of the backend.
@@ -27,11 +28,16 @@ I have already setup nodemon for automatic reloads.
 
 To run this, you will require mongodb atlas password,which i have provided on watsapp/discord. **please keep that a secret!**
 
-create a `.env` file in nodeBackend folder and place the mongodb secret password there like this `PASSWORD=YOUR_PASSWORD_HERE`
+create a `.env` file in nodeBackend folder and place the mongodb secret password there like this
 
-1. step one: `npm i`
-1. step two: `npm start`
-1. step three: open  `http://localhost:8080`
+`PASSWORD=YOUR_PASSWORD_HERE`
+
+how to run nodeBackend locally, follow these steps after completing the above setup
+
+1. step one : ` cd nodeBackend`
+1. step two: `npm i`
+1. step three: `npm start`
+1. step four: open  `http://localhost:8080`
 
 *currently frontend and backend are not configured to talk to each other*
 
@@ -41,7 +47,15 @@ This is not configured currently, and hence will not run
 
 
 
-
+.
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 --------------------------------------------
